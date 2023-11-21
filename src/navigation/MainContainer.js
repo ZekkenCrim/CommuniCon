@@ -42,7 +42,14 @@ export default function MainContainer() {
 
                     return <Ionicons name={iconName} size={size} color={color}/>
                 },
-             })}>
+             }) }
+             tabBarOptions={{
+                activeTintColor: 'black',
+                inactiveTintColor: 'grey',
+                labelStyle: {paddingBottom: 5, fontSize: 12},
+                style: {padding: 10, height: 60},
+             }}             
+             >
 
              <Tab.Screen name={homeName} component={HomeScreen}/>
              <Tab.Screen name={eventName} component={EventsScreen}/>
