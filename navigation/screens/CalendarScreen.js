@@ -2,11 +2,11 @@ import * as React from "react";
 import {View, Text, StyleSheet} from "react-native";
 
 export default function CalendarScreen({navigation}) {
-    returm(
+    return(
         <View style={StyleSheet.Calendar}>
           <Text style={styles.Text}
             onPress={() => navigation.navigate('Home')}>
-            Bulletin Screen
+            Calendar Screen
           </Text>
         </View>
 

@@ -4,11 +4,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 //Screens
-import HomeScreen from './HomeScreen';
-import EventsScreen from './EventsScreen';
-import CalendarScreen from './CalendarScreen';
-import BulletinScreen from './BulletinBoardScreen';
-import ProfileScreen from './ProfileScreen';
+import HomeScreen from './screens/HomeScreen';
+import EventsScreen from './screens/EventsScreen';
+import CalendarScreen from './screens/CalendarScreen';
+import BulletinScreen from './screens/BulletinBoardScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 // Screen names
 const homeName = 'Home';
@@ -31,13 +31,13 @@ export default function MainContainer() {
                     if (rn === homeName) {
                         iconName = focused ? 'home' : 'home-outline'
                     } else if (rn === eventName) {
-                        iconName = focused ? 'event' : 'newspaper-outline'
+                        iconName = focused ? 'newspaper' : 'newspaper-outline'
                     } else if (rn === calendarName) {
                         iconName = focused ? 'calendar' : 'calendar-outline'
                     } else if (rn === bulletinName) {
-                        iconName = focused ? 'list' : 'clipboard-outline'
+                        iconName = focused ? 'clipboard' : 'clipboard-outline'
                     } else if (rn === profileName) {
-                        iconName = focused ? 'profile' : 'person-circle-outline'
+                        iconName = focused ? 'person-circle' : 'person-circle-outline'
                     }
 
                     return <Ionicons name={iconName} size={size} color={color}/>
@@ -45,7 +45,10 @@ export default function MainContainer() {
              })}>
 
              <Tab.Screen name={homeName} component={HomeScreen}/>
-
+             <Tab.Screen name={eventName} component={EventsScreen}/>
+             <Tab.Screen name={calendarName} component={CalendarScreen}/>
+             <Tab.Screen name={bulletinName} component={BulletinScreen}/>
+             <Tab.Screen name={profileName} component={ProfileScreen}/>
 
             </Tab.Navigator>
             </NavigationContainer>        

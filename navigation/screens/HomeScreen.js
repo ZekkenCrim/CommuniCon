@@ -2,7 +2,7 @@ import * as React from "react";
 import {View, Text, StyleSheet} from "react-native";
 
 export default function HomeScreen({navigation}) {
-    returm(
+    return(
         <View style={StyleSheet.Home}>
           <Text style={styles.Text}
             onPress={() => alert('This is the "Home" Screen.')}>

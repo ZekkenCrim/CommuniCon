@@ -2,7 +2,7 @@ import * as React from "react";
 import {View, Text, StyleSheet} from "react-native";
 
 export default function BulletinScreen({navigation}) {
-    returm(
+    return(
         <View style={StyleSheet.Bulletin}>
           <Text style={styles.Text}
             onPress={() => navigation.navigate('Home')}>
