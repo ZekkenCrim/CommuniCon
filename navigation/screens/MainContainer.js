@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { NavigationContainer }  from '@react-navigation/native';
-import { createBottomTabNavigatior } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import * as React from "react";
+import { NavigationContainer }  from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 //Screens
 import HomeScreen from './HomeScreen';
@@ -17,7 +17,7 @@ const calendarName = 'Calender';
 const bulletinName = 'Bulletin';
 const profileName = 'Profile';
 
-const Tab = createBottomTabNavigatior();
+const Tab = createBottomTabNavigator();
 
 export default function MainContainer() {
     return (
